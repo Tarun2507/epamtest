@@ -265,6 +265,21 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public Student getNextStudent(Student student) {
 		// Add your implementation here
-		return null;
+		int id=0;
+		String fullname=null;
+		Date date=null;
+		double avgmark=0.0d;
+	for(int i=0;i<students.length;i++)
+	{
+		if(students[i].id==student.id)
+		{
+			id=students[i+1].id;
+			fullname=students[i+1].fullName;
+			date=students[i+1].birthDate;
+			avgmark=students[i+1].avgMark;
+		}
+	}
+	Student s=new Student(id,fullname,date,avgmark);
+	return s;
 	}
 }
