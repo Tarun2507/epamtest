@@ -213,7 +213,7 @@ public class StudentGroup implements StudentArrayOperation {
 	public void bubbleSort() {
 		for(int i=0;i<students.length-1;i++)
 		{
-			for(int j=0;j<students.length-1;j++)
+			for(int j=0;j<students.length-i-1;j++)
 			{
 				if(students[j].id > students[j+1].id)
 				{
