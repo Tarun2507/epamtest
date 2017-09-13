@@ -145,7 +145,13 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public void removeFromIndex(int index) {
-		// Add your implementation here
+		for(int i=index;i<students.length;i++)
+		{
+			students[i].id=0;
+			students[i].fullName=null;
+			students[i].birthDate=null;
+			students[i].avgMark=0.0d;
+		}
 	}
 
 	@Override
